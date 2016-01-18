@@ -1,0 +1,35 @@
+user
+------
+id: int
+name: string
+
+recipe
+--------
+id: int
+user_id: int
+name: string
+prep_time: int
+cook_time: int
+directions: string
+
+ingredient
+---------
+id: int
+name: string
+
+recipe_ingredient
+---------
+recipe_id: int
+ingredient_id: int
+measurement: enum (oz., T, tsp, etc.)
+quantity: int
+
+tag
+---------
+id: int
+name: string
+
+recipe_tag
+---------
+recipe_id: int
+tag_id: int
