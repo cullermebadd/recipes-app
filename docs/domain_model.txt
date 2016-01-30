@@ -21,8 +21,8 @@ recipe_ingredient
 ---------
 recipe_id: int
 ingredient_id: int
-measurement: enum (oz., T, tsp, etc.)
 quantity: int
+measurement: enum (oz., T, tsp, etc.)
 
 tag
 ---------
@@ -33,3 +33,14 @@ recipe_tag
 ---------
 recipe_id: int
 tag_id: int
+
+tip
+---------
+id: int
+description: string
+
+tip_tag
+---------
+tip_id: int
+tag_id: int
+
