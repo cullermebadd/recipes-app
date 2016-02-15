@@ -13,6 +13,12 @@ class UsersController < ApplicationController
         end
     end
 
+    # GET /users
+    # GET /users.json
+    def index
+        @users = User.all
+    end
+  
     private
 
     def user_params
