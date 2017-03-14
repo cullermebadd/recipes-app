@@ -7,22 +7,38 @@ recipe
 --------
 id: int
 user_id: int
-name: string
-prep_time: int
-cook_time: int
-directions: string
+title: string
+active_time: int
+total_time: int
+notes: string
+source: string
+url: string
+description: string
+imgURL: string
+
+direction_group
+---------
+id: int
+heading: string
+recipe_id: int
+
+direction
+---------
+id: int
+direction: string
+direction_group_id: int
+
+ingredient_group
+---------
+id: int
+heading: string
+recipe_id: int
 
 ingredient
 ---------
 id: int
-name: string
-
-recipe_ingredient
----------
-recipe_id: int
-ingredient_id: int
-quantity: int
-measurement: enum (oz., T, tsp, etc.)
+ingredient: string
+ingredient_group_id: int
 
 tag
 ---------
@@ -34,13 +50,82 @@ recipe_tag
 recipe_id: int
 tag_id: int
 
-tip
----------
-id: int
-description: string
 
-tip_tag
----------
-tip_id: int
-tag_id: int
-
+{
+    "ingredient_groups": [
+        {
+            "items": [
+                {
+                    "item": "pork tenderloins (1 1/2 pounds total), trimmed",
+                    "quantity": "2"
+                },
+                {
+                    "item": "tablespoons olive oil",
+                    "quantity": "2"
+                },
+                {
+                    "item": "tablespoons unsalted butter",
+                    "quantity": "5"
+                },
+                {
+                    "item": "teaspoon minced shallot",
+                    "quantity": "1"
+                },
+                {
+                    "item": "cup dry white wine",
+                    "quantity": "1/4"
+                },
+                {
+                    "item": "cup chicken broth",
+                    "quantity": "2/3"
+                },
+                {
+                    "item": "tablespoons Dijon mustard",
+                    "quantity": "3"
+                },
+                {
+                    "item": "cup heavy cream",
+                    "quantity": "2/3"
+                },
+                {
+                    "item": "teaspoon finely chopped fresh basil leaves",
+                    "quantity": "1"
+                },
+                {
+                    "item": "teaspoon finely chopped fresh parsley leaves",
+                    "quantity": "1"
+                }
+            ],
+            "heading": ""
+        },
+        {
+            "items": [
+                {
+                    "item": "Garnish: 1 teaspoon finely chopped fresh chives",
+                    "quantity": ""
+                }
+            ],
+            "heading": "Garnish"
+        }
+    ],
+    "url": "http://www.epicurious.com/recipes/food/views/varkenshaas-13259",
+    "description": "",
+    "direction_groups": [
+        {
+            "items": [
+                "Preheat oven to 400\u00b0 F.",
+                "Pat pork dry with paper towels and season with salt and pepper. In a large heavy kettle heat oil and 4 tablespoons butter over moderately high heat until hot but not smoking and brown pork on all sides. Reduce heat to moderate and cook pork, covered, turning occasionally, 10 minutes. Transfer pork to a shallow baking dish and roast in oven until a meat thermometer registers 155\u00b0 F. for barely pink meat, 10 to 15 minutes.",
+                "While pork is roasting, add remaining tablespoon butter and shallot to kettle and cook over moderate heat until softened. Add wine, broth, and mustard and simmer, scraping up brown bits, until reduced by about half. Add cream and basil and simmer until thickened. Stir in parsley and salt and pepper to taste.",
+                "Cut pork into 1/2-inch-thick slices. Pour sauce over pork and garnish with chives."
+            ],
+            "heading": ""
+        }
+    ],
+    "title": "Varkenshaas",
+    "recipe_yield": "Serves 4",
+    "imgURL": "http://cdn2.pepperplate.com/recipes/6fcfec68816e4011bdc87e27c1100e30.jpg?preset=sitethumb",
+    "total_time": null,
+    "active_time": null,
+    "notes": "",
+    "source": "Epicurious"
+},
